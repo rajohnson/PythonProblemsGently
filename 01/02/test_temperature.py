@@ -8,3 +8,7 @@ import pytest
 )
 def test_f_to_c(f, c):
     assert temperature.convertToCelsius(f) == c
+
+
+def test_c_to_f():
+    assert temperature.convertToFahrenheit(100) == 212
