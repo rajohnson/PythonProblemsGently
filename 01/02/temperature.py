@@ -3,4 +3,4 @@ def convertToCelsius(degreesF):
 
 
 def convertToFahrenheit(degreesC):
-    return 212
+    return (degreesC * 9 / 5) + 32
