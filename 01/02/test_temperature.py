@@ -10,5 +10,9 @@ def test_f_to_c(f, c):
     assert temperature.convertToCelsius(f) == c
 
 
-def test_c_to_f():
-    assert temperature.convertToFahrenheit(100) == 212
+@pytest.mark.parametrize(
+    "c, f",
+    [(100, 212)],
+)
+def test_c_to_f(c, f):
+    assert temperature.convertToFahrenheit(c) == f
