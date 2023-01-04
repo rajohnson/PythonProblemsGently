@@ -1,2 +1,2 @@
 def convertToCelsius(degreesF):
-    return 0
+    return (degreesF - 32) * 5 / 9
