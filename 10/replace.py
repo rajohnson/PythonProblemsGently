@@ -1,17 +1,13 @@
 def findAndReplace(src: str, target: str, replacement: str) -> str:
     parsedChars = []
-    match_count = 0
-    for c in src:
-        if target[match_count] == c:
-            match_count += 1
-            if match_count == len(target):
-                parsedChars.append(replacement)
-                match_count = 0
+    n = 0
+    while n < len(src):
+        if src[n : n + len(target)] == target:
+            parsedChars.append(replacement)
+            n += len(target)
         else:
-            if match_count:
-                parsedChars.append(target[:match_count])
-                match_count = 0
-            parsedChars.append(c)
+            parsedChars.append(src[n])
+            n += 1
 
     return "".join(parsedChars)
 
