@@ -3,54 +3,54 @@ import geometry
 
 
 @pytest.mark.parametrize(
-    "l, w, area", [(4, 10, 40), (0, 9999, 0), (10, 10, 100), (5, 8, 40)]
+    "length, width, area", [(4, 10, 40), (0, 9999, 0), (10, 10, 100), (5, 8, 40)]
 )
-def test_area(l, w, area):
-    assert geometry.area(l, w) == area
+def test_area(length, width, area):
+    assert geometry.area(length, width) == area
 
 
 @pytest.mark.parametrize(
-    "l, w",
+    "length, width",
     [
         (-1, 1),
         (1, -1),
     ],
 )
-def test_area_negative(l, w):
+def test_area_negative(length, width):
     with pytest.raises(ValueError):
-        geometry.area(l, w)
+        geometry.area(length, width)
 
 
 @pytest.mark.parametrize(
-    "l, w, perimeter",
+    "length, width, perimeter",
     [(4, 10, 28), (0, 9999, 19998), (10, 10, 40), (5, 8, 26)],
 )
-def test_perimeter(l, w, perimeter):
-    assert geometry.perimeter(l, w) == perimeter
+def test_perimeter(length, width, perimeter):
+    assert geometry.perimeter(length, width) == perimeter
 
 
 @pytest.mark.parametrize(
-    "l, w",
+    "length, width",
     [
         (-1, 1),
         (1, -1),
     ],
 )
-def test_perimeter_negative(l, w):
+def test_perimeter_negative(length, width):
     with pytest.raises(ValueError):
-        geometry.perimeter(l, w)
+        geometry.perimeter(length, width)
 
 
 @pytest.mark.parametrize(
-    "l, w,h, volume",
+    "length, width, height, volume",
     [(10, 4, 5, 200), (10, 10, 10, 1000), (9999, 0, 9999, 0), (5, 8, 10, 400)],
 )
-def test_volume(l, w, h, volume):
-    assert geometry.volume(l, w, h) == volume
+def test_volume(length, width, height, volume):
+    assert geometry.volume(length, width, height) == volume
 
 
 @pytest.mark.parametrize(
-    "l, w, h",
+    "length, width, height",
     [
         (-1, 1, 1),
         (1, -1, 1),
@@ -61,13 +61,13 @@ def test_volume(l, w, h, volume):
         (-1, -1, -1),
     ],
 )
-def test_volume_negative(l, w, h):
+def test_volume_negative(length, width, height):
     with pytest.raises(ValueError):
-        geometry.volume(l, w, h)
+        geometry.volume(length, width, height)
 
 
 @pytest.mark.parametrize(
-    "l, w,h, surface_area",
+    "length, width, height, surface_area",
     [
         (10, 4, 5, 220),
         (10, 10, 10, 600),
@@ -75,12 +75,12 @@ def test_volume_negative(l, w, h):
         (5, 8, 10, 340),
     ],
 )
-def test_surface_area(l, w, h, surface_area):
-    assert geometry.surfaceArea(l, w, h) == surface_area
+def test_surface_area(length, width, height, surface_area):
+    assert geometry.surfaceArea(length, width, height) == surface_area
 
 
 @pytest.mark.parametrize(
-    "l, w, h",
+    "length, width, height",
     [
         (-1, 1, 1),
         (1, -1, 1),
@@ -91,6 +91,6 @@ def test_surface_area(l, w, h, surface_area):
         (-1, -1, -1),
     ],
 )
-def test_surface_area_negative(l, w, h):
+def test_surface_area_negative(length, width, height):
     with pytest.raises(ValueError):
-        geometry.surfaceArea(l, w, h)
+        geometry.surfaceArea(length, width, height)

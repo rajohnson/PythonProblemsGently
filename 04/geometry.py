@@ -1,22 +1,22 @@
-def area(l: float, w: float) -> float:
-    if l < 0 or w < 0:
+def area(length: float, width: float) -> float:
+    if length < 0 or width < 0:
         raise ValueError("cannot have negative side lengths")
-    return l * w
+    return length * width
 
 
-def perimeter(l: float, w: float) -> float:
-    if l < 0 or w < 0:
+def perimeter(length: float, width: float) -> float:
+    if length < 0 or width < 0:
         raise ValueError("cannot have negative side lengths")
-    return 2 * l + 2 * w
+    return 2 * length + 2 * width
 
 
-def volume(l: float, w: float, h: float) -> float:
-    if l < 0 or w < 0 or h < 0:
+def volume(length: float, width: float, height: float) -> float:
+    if length < 0 or width < 0 or height < 0:
         raise ValueError("cannot have negative side lengths")
-    return l * w * h
+    return length * width * height
 
 
-def surfaceArea(l: float, w: float, h: float) -> float:
-    if l < 0 or w < 0 or h < 0:
+def surfaceArea(length: float, width: float, height: float) -> float:
+    if length < 0 or width < 0 or height < 0:
         raise ValueError("cannot have negative side lengths")
-    return 2 * (l * w + l * h + h * w)
+    return 2 * (length * width + length * height + height * width)
