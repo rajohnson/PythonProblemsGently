@@ -10,7 +10,3 @@ def findAndReplace(src: str, target: str, replacement: str) -> str:
             n += 1
 
     return "".join(parsedChars)
-
-
-if __name__ == "__main__":
-    print(findAndReplace("forget about the fox", "fox", "dog"))
