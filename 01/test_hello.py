@@ -12,7 +12,4 @@ def test_hello(capsys, monkeypatch, name):
     monkeypatch.setattr("builtins.input", mock_input)
     hello.hello()
     output = capsys.readouterr().out
-    assert (
-        output
-        == f"Hello, world!\nWhat is your name?\n{name}\nHello, {name}.\n"
-    )
+    assert output == f"Hello, world!\nWhat is your name?\n{name}\nHello, {name}.\n"
