@@ -1,5 +1,5 @@
-from replace import findAndReplace
 import pytest
+from replace import findAndReplace
 
 
 @pytest.mark.parametrize(

@@ -1,5 +1,5 @@
-from time_str import getHoursMinutesSeconds
 import pytest
+from time_str import getHoursMinutesSeconds
 
 
 @pytest.mark.parametrize(

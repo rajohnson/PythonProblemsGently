@@ -1,5 +1,5 @@
-from fizzbuzz import fizzBuzz, fizzbuzz_of
 import pytest
+from fizzbuzz import fizzBuzz, fizzbuzz_of
 
 
 @pytest.mark.parametrize("num", [-1, 1, 2, 4, 7, 8, 11, 13, 14])

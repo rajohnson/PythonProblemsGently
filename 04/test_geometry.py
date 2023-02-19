@@ -1,5 +1,5 @@
-import pytest
 import geometry
+import pytest
 
 
 @pytest.mark.parametrize(

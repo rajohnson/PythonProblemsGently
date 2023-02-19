@@ -1,5 +1,5 @@
-from minmax import getSmallest, getLargest
 import pytest
+from minmax import getLargest, getSmallest
 
 
 @pytest.mark.parametrize(

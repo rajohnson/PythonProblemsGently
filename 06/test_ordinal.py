@@ -1,5 +1,5 @@
-from ordinal import ordinalSuffix
 import pytest
+from ordinal import ordinalSuffix
 
 
 @pytest.mark.parametrize(

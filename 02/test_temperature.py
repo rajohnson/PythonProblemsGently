@@ -1,5 +1,5 @@
-import temperature
 import pytest
+import temperature
 
 
 @pytest.mark.parametrize(

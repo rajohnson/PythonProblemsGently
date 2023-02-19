@@ -1,4 +1,4 @@
-from files import writeToFile, appendToFile, readFromFile
+from files import appendToFile, readFromFile, writeToFile
 
 
 def test_write_append_read(tmp_path):

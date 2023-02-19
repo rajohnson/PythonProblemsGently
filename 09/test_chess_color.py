@@ -1,5 +1,5 @@
-from chess_color import getChessSquareColor
 import pytest
+from chess_color import getChessSquareColor
 
 
 @pytest.mark.parametrize("row, col", [(0, 1), (0, 5), (0, 7), (7, 6)])

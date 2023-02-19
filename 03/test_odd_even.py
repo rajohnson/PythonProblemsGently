@@ -1,5 +1,5 @@
-from odd_even import isOdd, isEven
 import pytest
+from odd_even import isEven, isOdd
 
 
 @pytest.mark.parametrize("num", [-2, 0.5, 0, 4.2, 8, 100, 212, 1_000_000, 2.0])
