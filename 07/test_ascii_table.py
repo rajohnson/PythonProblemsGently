@@ -1,7 +1,8 @@
+from _pytest.capture import CaptureFixture
 from ascii_table import printAsciiTable
 
 
-def test_printAsciiTable(capsys):
+def test_printAsciiTable(capsys: CaptureFixture[str]) -> None:
     printAsciiTable()
     output = capsys.readouterr().out
     expected = (

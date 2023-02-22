@@ -13,5 +13,5 @@ from replace import findAndReplace
         ("forget about the fox", "fox", "dog", "forget about the dog"),
     ],
 )
-def test_replace(begin, target, replacement, end):
+def test_replace(begin: str, target: str, replacement: str, end: str) -> None:
     assert findAndReplace(begin, target, replacement) == end

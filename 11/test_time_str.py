@@ -15,5 +15,5 @@ from time_str import getHoursMinutesSeconds
         (0, "0s"),
     ],
 )
-def test_getHoursMinutesSeconds(seconds, expected):
+def test_getHoursMinutesSeconds(seconds: int, expected: str) -> None:
     assert getHoursMinutesSeconds(seconds) == expected

@@ -1,4 +1,5 @@
 import random
+from typing import Sequence
 
 import pytest
 from average import average
@@ -13,11 +14,11 @@ from average import average
         ([0, 0, 0, 0, 0, 0], 0),
     ],
 )
-def test_average(input_values, expected):
+def test_average(input_values: Sequence[float], expected: float | None) -> None:
     assert average(input_values) == expected
 
 
-def test_order_independent():
+def test_order_independent() -> None:
     random.seed(42)
     test_data = [1, 2, 3, 1, 2, 3, 1, 2, 3]
     for _ in range(100):

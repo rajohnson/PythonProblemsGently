@@ -23,5 +23,5 @@ from ordinal import ordinalSuffix
         (101, "101st"),
     ],
 )
-def test_ordinal(num, expected):
+def test_ordinal(num: int, expected: str) -> None:
     assert ordinalSuffix(num) == expected

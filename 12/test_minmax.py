@@ -1,3 +1,5 @@
+from typing import Sequence
+
 import pytest
 from minmax import getLargest, getSmallest
 
@@ -13,7 +15,7 @@ from minmax import getLargest, getSmallest
         ([], None),
     ],
 )
-def test_getSmallest(values, expected):
+def test_getSmallest(values: Sequence[int], expected: int | None) -> None:
     assert getSmallest(values) == expected
 
 
@@ -28,5 +30,5 @@ def test_getSmallest(values, expected):
         ([], None),
     ],
 )
-def test_getLargest(values, expected):
+def test_getLargest(values: Sequence[int], expected: int | None) -> None:
     assert getLargest(values) == expected
