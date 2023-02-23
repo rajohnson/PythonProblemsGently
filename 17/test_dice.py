@@ -1,7 +1,16 @@
 import pytest
 from dice import SIDES, roll_dice
+from hypothesis import given, strategies
 
-# this would be a decent spot to use hypothesis for the tests
+
+# This essentially duplicates test_roll_dice, but it is here for experimentation
+# with property based testing.
+@given(strategies.integers(min_value=1, max_value=1000))
+def test_dice_in_range(n: int) -> None:
+    roll = roll_dice(n)
+
+    assert roll >= n
+    assert roll <= n * SIDES
 
 
 @pytest.mark.repeat(5)
